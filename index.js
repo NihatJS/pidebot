@@ -45,7 +45,7 @@ client.on('message', message => {
 	let color = ((1 << 24) * Math.random() | 0).toString(16); //Generates random hex value.
 
 		let krl = new Discord.RichEmbed() //Embeds.
-			.setTitle(`OyunKolu: Kurallar`)
+			.setTitle(`Bit Madeni: Kurallar`)
 			.setColor(`#${color}`)
 			.setDescription('Argo kullanımı yasaktır.\nSpam atmak yasaktır.\nFazla büyük harf kullanılmamalıdır.\nBot komutları #komut-istemi kanalında kullanılmalıdır.\nSıkılmak yasaktır :)\nBir mesajda fazla satır kullanılmamalıdır.\nEğlenmenize bakın :D')
      message.channel.sendMessage({embed: krl});	
