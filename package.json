@@ -1,0 +1,15 @@
+{
+  "name": "Pide",
+  "version": "1.0.0",
+  "description": "Pide bot release",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && node index.js"
+  },
+  "author": "NihatJS",
+  "license": "none",
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "bufferutil": "^3.0.3"
+  }
+}
