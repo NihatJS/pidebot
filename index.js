@@ -21,8 +21,8 @@ client.on('guildCreate', guild => {
 })
 
 client.on('message', message => {
+	if (message.content.toLowerCase().includes('<@430078929068490752>')) {
 	if (message.channel.type === "dm") return message.channel.send("Artık özelden yardım edemiyoruz.");
-	if (message.isMentioned(client.user))
 	
 		
 	if (message.content.toLowerCase().includes('merhaba')) message.channel.send(message.author.username + ' Sanada merhaba');
@@ -82,7 +82,7 @@ client.on('message', message => {
 	if (message.content.toLowerCase().includes('mesaj yazdır')) {
 		
 	}
-	
+	}
 	
 });
 
