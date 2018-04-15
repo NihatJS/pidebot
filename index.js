@@ -41,6 +41,17 @@ client.on('message', message => {
      message.channel.send({embed: hexembed});	
 	}
 	
+	if (message.content.toLowerCase().includes('kurallar')) {
+	let color = ((1 << 24) * Math.random() | 0).toString(16); //Generates random hex value.
+
+		let krl = new Discord.RichEmbed() //Embeds.
+			.setTitle(`OyunKolu: Kurallar`)
+			.setDescription('Argo kullanımı yasaktır.\nSpam atmak yasaktır.\nFazla büyük harf kullanılmamalıdır.\nBot komutları #komut-istemi kanalında kullanılmalıdır.\nSıkılmak yasaktır :)\nBir mesajda fazla satır kullanılmamalıdır.\nEğlenmenize bakın :D')
+     message.author.sendMessage({embed: krl});	
+	}	
+		
+		
+		
 	if (message.content.toLowerCase().includes('yardım et')) {
 	let color = ((1 << 24) * Math.random() | 0).toString(16); //Generates random hex value.
 
