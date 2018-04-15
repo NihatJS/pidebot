@@ -41,7 +41,7 @@ client.on('message', message => {
      message.channel.send({embed: hexembed});	
 	}
 	
-	if (message.content.toLowerCase().includes('oyunkolu kanalının kuralları')) {
+	if (message.content.toLowerCase().includes('bit madeni kanalının kuralları')) {
 	let color = ((1 << 24) * Math.random() | 0).toString(16); //Generates random hex value.
 
 		let krl = new Discord.RichEmbed() //Embeds.
