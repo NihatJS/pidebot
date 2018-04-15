@@ -46,8 +46,9 @@ client.on('message', message => {
 
 		let krl = new Discord.RichEmbed() //Embeds.
 			.setTitle(`OyunKolu: Kurallar`)
+			.setColor(`#${color}`)
 			.setDescription('Argo kullanımı yasaktır.\nSpam atmak yasaktır.\nFazla büyük harf kullanılmamalıdır.\nBot komutları #komut-istemi kanalında kullanılmalıdır.\nSıkılmak yasaktır :)\nBir mesajda fazla satır kullanılmamalıdır.\nEğlenmenize bakın :D')
-     message.author.sendMessage({embed: krl});	
+     message.channel.sendMessage({embed: krl});	
 	}	
 		
 		
