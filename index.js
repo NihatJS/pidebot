@@ -21,8 +21,8 @@ client.on('guildCreate', guild => {
 })
 
 client.on('message', message => {
-	if (message.isMentioned(client.user))
 	if (message.channel.type === "dm") return message.channel.send("Artık özelden yardım edemiyoruz.");
+	if (message.isMentioned(client.user))
 	
 		
 	if (message.content.toLowerCase().includes('merhaba')) message.channel.send(message.author.username + ' Sanada merhaba');
