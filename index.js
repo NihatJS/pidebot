@@ -41,13 +41,14 @@ client.on('message', message => {
      message.channel.send({embed: hexembed});	
 	}
 	
-	if (message.content.toLowerCase().includes('bit madeni kanalının kuralları')) {
+	if (message.content.toLowerCase().includes('kanal emojilerini göster')) {
 	let color = ((1 << 24) * Math.random() | 0).toString(16); //Generates random hex value.
 
 		let krl = new Discord.RichEmbed() //Embeds.
-			.setTitle(`Bit Madeni: Kurallar`)
+			.setTitle(`Emoji listesi:`)
 			.setColor(`#${color}`)
-			.setDescription('Argo kullanımı yasaktır.\nSpam atmak yasaktır.\nFazla büyük harf kullanılmamalıdır.\nBot komutları #komut-istemi kanalında kullanılmalıdır.\nSıkılmak yasaktır :)\nBir mesajda fazla satır kullanılmamalıdır.\nEğlenmenize bakın :D')
+			  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
+			.setDescription(emojilist)
      message.channel.sendMessage({embed: krl});	
 	}	
 		
