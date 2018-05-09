@@ -43,12 +43,11 @@ client.on('message', message => {
 	
 	if (message.content.toLowerCase().includes('kanal emojilerini göster')) {
 	let color = ((1 << 24) * Math.random() | 0).toString(16); //Generates random hex value.
-
+ const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
 		let krl = new Discord.RichEmbed() //Embeds.
 			.setTitle(`Emoji listesi:`)
 			.setColor(`#${color}`)
 		        .setDescription(emojiList)
-			  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
      message.channel.sendMessage({embed: krl});	
 	}	
 		
