@@ -48,7 +48,7 @@ client.on('message', message => {
 			.setTitle(`Emoji listesi:`)
 			.setColor(`#${color}`)
 			  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
-			.setDescription(emojilist)
+			.setDescription(emojiList)
      message.channel.sendMessage({embed: krl});	
 	}	
 		
