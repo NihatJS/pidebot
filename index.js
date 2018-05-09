@@ -47,8 +47,8 @@ client.on('message', message => {
 		let krl = new Discord.RichEmbed() //Embeds.
 			.setTitle(`Emoji listesi:`)
 			.setColor(`#${color}`)
+		        .setDescription(emojiList)
 			  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
-			.setDescription(emojiList)
      message.channel.sendMessage({embed: krl});	
 	}	
 		
