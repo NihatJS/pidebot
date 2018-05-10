@@ -24,8 +24,6 @@ client.on('message', message => {
 	if (message.channel.type === "dm") return message.channel.send("Artık özelden yardım edemiyoruz.");
 	
 		
-
-	}
 	
 });
 
