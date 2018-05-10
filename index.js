@@ -22,7 +22,22 @@ client.on('guildCreate', guild => {
 
 client.on('message', message => {
 	if (message.channel.type === "dm") return message.channel.send("Artık özelden yardım edemiyoruz.");
-	
+    if (message.content === 'çal aleyna') { // eğer prefix ve çay yan yana kullanılırsa burda alttaki şeyleri yap
+        if (message.channel.type !== 'text') return;
+
+        const { voiceChannel } = message.member;
+
+        if (!voiceChannel) { // eğer kullanıcı sesli kanalda değilse resti çek
+            return message.reply('Bir kanala gir öyle çaldır yoksa ohooo');
+        }
+
+        voiceChannel.join().then(connection => { // ve çal bakalım
+            const stream = ytdl('https://www.youtube.com/watch?v=yJpJCZYTL74', { filter: 'audioonly' });
+            const dispatcher = connection.playStream(stream);
+
+            dispatcher.on('end', () => voiceChannel.leave());
+        });
+    }
 		
 	
 });
