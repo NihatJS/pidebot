@@ -12,6 +12,6 @@
     "discord.js": "^11.3.0",
     "bufferutil": "^3.0.3",
     "ytdl-core": "0.20.3",
-    "ffmpeg": "0.0.4"
+    "FFMPEG": "0.0.4"
   }
 }
